@@ -120,9 +120,7 @@ public class RationalNumbers {
         }
 
         boolean lessThan(Rational inrat) {
-            if (num * inrat.denom < inrat.num * denom)
-                return true;
-            return false;
+            return num * inrat.denom < inrat.num * denom;
         }
 
         Rational add(Rational inrat) {
