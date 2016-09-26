@@ -1,0 +1,44 @@
+**** Laboration 4 ***
+
+Till detta skall ENDAST används det vi gått igenom vecka 1-4
+
+För ev. vidare instruktioner se i respektive fil
+
+1.  Gör klart klassen Rational i basics/RationalNumbers. Kommentera av testerna en i taget tills
+    alla ger utskriften true.
+
+    TIPS: Se till att alla bråk är förkortade så långt det går.
+    TIPS: Ni gjorde en gcd-metod tidigare, återanvänd den!
+
+2. Utgå från basics/PointAndTriangle och implementera klasserna (kommentera av på samma sätt som i 1.)
+
+    a)  Point, en klass för 3D-koordinater.
+        - Punkten representeras m.h.a. 3 double (x,y,z)
+        - Lägg till en konstruktor som tar 3 reella tal och intierar x,y,z
+        - Lägg till en kopieringskonstruktor
+        - Lägg till en metod distance, som beräknar avståndet till an annan Point
+          (metoder ur Math behövs)
+        - Gör klassen icke-muterbar.
+
+    b)  Tringle, en klass för trianglar i 3D.
+        - En triangle representeras m.h.a. en array med tre Point-objekt.
+        - Lägg till en konstruktor som tar tre Point-objekt och initierar arrayen.
+        - Lägg till en metod area som beräknar triangelns area
+        Använd Herons formel, se webben.
+
+
+3.  (Uber) Implementera en version av spelet Breakout, se product/Breakout (läs kommentarer för demo)
+    Programmet går inte att köra från början (undantag)
+    För en demo (skriven i JavaScript) se
+    https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay
+    Klicka "result" ovanför koden (programmet använder musen, det gör inte vi)
+    Finns ingen speciellt "vinst", man kör tills alla block är borta.
+
+
+4.  (Uber) Skriv en nätverksversion av något av de spel vi gått igenom
+    Kan ganska lätt göras med XML-RPC, see http://xmlrpc.scripting.com/spec.html.
+    Sök vidare på nätet för exemplel (vi använder apache:s version av XML-PRC).
+
+    Startkod finns i uber/* Testa att köra servern (först) och därefter clienten.
+
+
