@@ -19,6 +19,8 @@ public class RationalNumbers {
     void program() {
         // This is testing. All output should print true
         Rational r = new Rational(2);
+        out.println(r.num == 2 && r.denom == 1);    //Is this supposed to be here?
+
         r = new Rational(4, 9);
         out.println(r.num == 4 && r.denom == 9);
         r = new Rational(49, 168);
@@ -65,7 +67,7 @@ public class RationalNumbers {
         }
 
         Rational(int num, int denom) {
-            int greatsetcommondenom = greatestCommonDenom(num, denom);
+            int greatsetcommondenom = greatestCommonDenominator(num, denom);
 
             num = num / greatsetcommondenom;
             denom = denom / greatsetcommondenom;
@@ -80,9 +82,8 @@ public class RationalNumbers {
             this.denom = denom;
         }
 
-        int greatestCommonDenom(int a_in, int b_in) {
+        int greatestCommonDenominator(int a_in, int b_in) {
             if (b_in == 0) {
-                out.print(a_in);
                 return a_in;
             }
             return (greatestCommonDenominator(b_in, a_in % b_in));
@@ -105,12 +106,6 @@ public class RationalNumbers {
             return (double) num / denom;
         }
 
-        int greatestCommonDenominator(int a_in, int b_in) {
-            if (b_in == 0) {
-                return a_in;
-            }
-            return (greatestCommonDenominator(b_in, a_in % b_in));
-        }
 
         Rational mul(Rational inrat) {
             return new Rational(num * inrat.num, denom * inrat.denom);
