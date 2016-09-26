@@ -90,10 +90,8 @@ public class RationalNumbers {
         }
 
         boolean equals(Rational inrat) {
-            if ((inrat.num == num && inrat.denom == denom) || (inrat.num == -num && inrat.denom == -denom))
-                return true;
+            return (inrat.num == num && inrat.denom == denom) || (inrat.num == -num && inrat.denom == -denom);
 
-            return false;
         }
 
         Rational(Rational inrational) {
